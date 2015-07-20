@@ -17,7 +17,7 @@
                  [org.omcljs/om "0.8.8"]
                  [environ "1.0.0"]]
 
-  :plugins [[lein-cljsbuild "1.0.5"]
+  :plugins [[lein-cljsbuild "1.0.6"]
             [lein-environ "1.0.0"]]
 
   :min-lein-version "2.5.0"
@@ -52,15 +52,16 @@
 
                    :env {:is-dev true}
 
-                   :cljsbuild {:test-commands {"casper" ["casperjs" "env/test/js/unit-test.js"]
+                   :cljsbuild {:test-commands {"casper" ["casperjs" "test" "resources/public/js/app_test.js"]
                                                ;"test" ["phantomjs" "env/test/js/unit-test.js" "env/test/unit-test.html"]
                                                }
-                               :builds {:app {:source-paths ["env/dev/cljs"]}
-                                        :test {:source-paths ["src/cljs" "test/cljs"]
+                               :builds {
+                                        ;:app {:source-paths ["env/dev/cljs"]}
+                                        :test {:source-paths [ "test/cljs"] ;; "src/cljs"
                                                :compiler {:output-to     "resources/public/js/app_test.js"
                                                           :output-dir    "resources/public/js/test"
                                                           :source-map    "resources/public/js/test.js.map"
-                                                          :preamble      ["react/react.min.js"]
+                                                          ;:preamble      ["react/react.min.js"]
                                                           :optimizations :whitespace
                                                           :pretty-print  false}}}}}
 
