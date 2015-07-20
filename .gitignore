@@ -12,3 +12,4 @@ pom.xml.asc
 /.repl
 .idea
 caspercljs.iml
+casper/target
