@@ -59,7 +59,8 @@ Product Feed and Image Optimisation Technology | Bright North
 
 Running `lein casper-test` should print:
 
-```Successfully compiled "casper/target/app_test.js" in 15.252 seconds.
+```
+Successfully compiled "casper/target/app_test.js" in 15.252 seconds.
 Running ClojureScript test: casper
 Test file: casper/target/app_test.js
 # Untitled suite in casper/target/app_test.js
