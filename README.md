@@ -16,8 +16,8 @@ folders respectively and run the compiled JavaScript outputs using CapserJS.
 
 ## Requirements
 
-* [CasperJS 1.1.0-DEV](http://casperjs.readthedocs.org/en/latest/# "target =" _ blank)
-* [Leiningen 2.5.1](https://github.com/technomancy/leiningen "target =" _ blank)
+* [CasperJS 1.1.0-DEV](http://casperjs.readthedocs.org/en/latest/#)
+* [Leiningen 2.5.1](https://github.com/technomancy/leiningen)
 
 ## Trying it out
 
