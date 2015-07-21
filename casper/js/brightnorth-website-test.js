@@ -4,8 +4,8 @@ casper.test.begin('', 1, function suite(test) {
 
   casper.start(url, function () {
     this.echo(this.getTitle());
-    test.assertTitle("Improve Your eCommerce Product Data Feeds | Bright North",
-      "bright north homepage title is the one expected");
+    test.assertTitle("CasperJS-CLJS Test Example | Bright North",
+      "Test page title is the one expected");
 
   });
 
