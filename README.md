@@ -1,7 +1,25 @@
 # casperjs-cljs-test-example
 
 
-## Development
+## Description
+
+Load an example website built in ClojureScript based on the Chestnut template. This can be used to run CasperJS tests 
+written in ClojureScript and cross-compiled to JavaScript. 
+
+## Project Structure
+
+The example website is based on the standard Chestnut template. Added to this is a `casper` folder containing a CasperJS 
+script and test and the corresponding ClojureScript translated versions.
+
+The `casper` and `casper-test` lein aliases cross-compile the namespaces in the `casper/script` and `casper/test` 
+folders respectively and run the compiled JavaScript outputs using CapserJS.
+
+## Requirements
+
+* [CasperJS 1.1.0-DEV](http://casperjs.readthedocs.org/en/latest/# "target =" _ blank)
+* [Leiningen 2.5.1](https://github.com/technomancy/leiningen "target =" _ blank)
+
+## Trying it out
 
 Open a terminal and type `lein repl` to start a Clojure REPL
 (interactive prompt).
@@ -25,63 +43,33 @@ When you see the line `Successfully compiled "resources/public/app.js"
 in 21.36 seconds.`, you're ready to go. Browse to
 `http://localhost:10555` and enjoy.
 
-**Attention: It is not longer needed to run `lein figwheel`
-  separately. This is now taken care of behind the scenes**
+While this command is running, open a new terminal window and enter `lein casper` to run the CasperJS script and 
+`lein casper-test` to run the tests.
 
-## Trying it out
-
-If all is well you now have a browser window saying 'Hello Chestnut',
-and a REPL prompt that looks like `cljs.user=>`.
-
-Open `resources/public/css/style.css` and change some styling of the
-H1 element. Notice how it's updated instantly in the browser.
-
-Open `src/cljs/casperjs-cljs-test-example/core.cljs`, and change `dom/h1` to
-`dom/h2`. As soon as you save the file, your browser is updated.
-
-In the REPL, type
+Running `lein casper` should print:
 
 ```
-(ns casperjs-cljs-test-example.core)
-(swap! app-state assoc :text "Interactivity FTW")
+\Compiling ClojureScript.
+Compiling "casper/target/app.js" from ["casper/script"]...
+Successfully compiled "casper/target/app.js" in 15.439 seconds.
+Running ClojureScript test: casper
+CasperJS-CLJS Test Example | Bright North
+Product Feed and Image Optimisation Technology | Bright North
 ```
 
-Notice again how the browser updates.
+Running `lein casper-test` should print:
 
-## Deploying to Heroku
-
-This assumes you have a
-[Heroku account](https://signup.heroku.com/dc), have installed the
-[Heroku toolbelt](https://toolbelt.heroku.com/), and have done a
-`heroku login` before.
-
-``` sh
-git init
-git add -A
-git commit
-heroku create
-git push heroku master:master
-heroku open
 ```
-
-## Running with Foreman
-
-Heroku uses [Foreman](http://ddollar.github.io/foreman/) to run your
-app, which uses the `Procfile` in your repository to figure out which
-server command to run. Heroku also compiles and runs your code with a
-Leiningen "production" profile, instead of "dev". To locally simulate
-what Heroku does you can do:
-
-``` sh
-lein with-profile -dev,+production uberjar && foreman start
+Successfully compiled "casper/target/app_test.js" in 15.252 seconds.
+Running ClojureScript test: casper
+Test file: casper/target/app_test.js
+# Untitled suite in casper/target/app_test.js
+CasperJS-CLJS Test Example | Bright North
+PASS Test page title is the one expected
+PASS 1 test executed in 0.423s, 1 passed, 0 failed, 0 dubious, 0 skipped.
 ```
-
-Now your app is running at
-[http://localhost:5000](http://localhost:5000) in production mode.
 
 ## License
-
-Copyright © 2014 FIXME
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

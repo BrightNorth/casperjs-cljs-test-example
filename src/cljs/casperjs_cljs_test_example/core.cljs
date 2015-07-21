@@ -17,10 +17,13 @@
             (dom/div nil
               (dom/a #js{:href   "http://www.brightnorth.co.uk/"
                          :target "_blank"}
-                (dom/img #js{:src       "images/bn-logo-white-large.png"
+                (dom/img #js{:src       "images/bn-logo-inv-large.png"
                              :className "bright-north-logo"})))
             (dom/div nil
               (dom/img #js{:src       "images/casperjs-logo.png"
-                           :className "casperjs-logo"}))))))
+                           :className "casperjs-logo"}))
+            (dom/div nil
+              (dom/img #js{:src       "images/cljs-logo.jpg"
+                           :className "cljs-logo"}))))))
     app-state
     {:target (. js/document (getElementById "app"))}))

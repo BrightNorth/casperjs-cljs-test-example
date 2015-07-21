@@ -3,7 +3,7 @@ h1 {
 }
 
 body {
-    background-color: #595959;
+    background-color: #2b2e31;
     text-align: center;
 }
 
@@ -12,7 +12,21 @@ body {
     width: 50%;
 }
 
-.bright-north-logo, .casperjs-logo {
+.casperjs-logo {
+    height: 30%;
+    width: 30%;
+    margin: 1.5em;
+    margin-top: 0;
+}
+
+.cljs-logo {
+    height: 30%;
+    width: 30%;
+    border-radius: 1200px;
+    margin: 1.5em;
+}
+
+.bright-north-logo, .casperjs-logo, .cljs-logo {
     max-height: 100%;
     max-width: 100%;
 }
