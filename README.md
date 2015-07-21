@@ -48,7 +48,8 @@ While this command is running, open a new terminal window and enter `lein casper
 
 Running `lein casper` should print:
 
-```\Compiling ClojureScript.
+```
+\Compiling ClojureScript.
 Compiling "casper/target/app.js" from ["casper/script"]...
 Successfully compiled "casper/target/app.js" in 15.439 seconds.
 Running ClojureScript test: casper
