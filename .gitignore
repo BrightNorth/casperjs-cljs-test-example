@@ -11,5 +11,5 @@ pom.xml.asc
 /out
 /.repl
 .idea
-caspercljs.iml
 casper/target
+*.iml

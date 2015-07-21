@@ -1,5 +1,5 @@
-(ns caspercljs.main
-  (:require [caspercljs.core :as core]
+(ns casperjs-cljs-test-example.main
+  (:require [casperjs-cljs-test-example.core :as core]
             [figwheel.client :as figwheel :include-macros true]
             [cljs.core.async :refer [put!]]
             [weasel.repl :as weasel]))

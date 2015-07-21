@@ -1,7 +1,7 @@
 (ns caspercljs.brightnorth-website-cljs-test)
 
 
-(def url "http://www.brightnorth.co.uk/contact-us.html")
+(def url "http://localhost:10555/")
 
 
 (def casper js/casper)

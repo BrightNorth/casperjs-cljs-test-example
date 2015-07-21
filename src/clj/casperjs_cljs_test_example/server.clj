@@ -1,6 +1,6 @@
-(ns caspercljs.server
+(ns casperjs-cljs-test-example.server
   (:require [clojure.java.io :as io]
-            [caspercljs.dev :refer [is-dev? inject-devmode-html browser-repl start-figwheel]]
+            [casperjs-cljs-test-example.dev :refer [is-dev? inject-devmode-html browser-repl start-figwheel]]
             [compojure.core :refer [GET defroutes]]
             [compojure.route :refer [resources]]
             [net.cgrand.enlive-html :refer [deftemplate]]

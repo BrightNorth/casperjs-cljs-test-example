@@ -27,7 +27,7 @@ page.open(url, function (status) {
   console.log("Running test.");
 
   var result = page.evaluate(function() {
-    return caspercljs.test_runner.runner();
+    return casperjs_cljs_test_example.test_runner.runner();
   });
 
   if (result != 0) {

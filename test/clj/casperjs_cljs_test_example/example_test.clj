@@ -1,4 +1,4 @@
-(ns caspercljs.example-test
+(ns casperjs_cljs_test_example.example-test
     (:require [clojure.test :refer :all]))
 
 (deftest example-passing-test

@@ -1,4 +1,4 @@
-(ns caspercljs.dev
+(ns casperjs-cljs-test-example.dev
     (:require [environ.core :refer [env]]))
 
 (if (env :is-dev)
