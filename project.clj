@@ -17,15 +17,17 @@
                  [org.omcljs/om "0.8.8"]
                  [environ "1.0.0"]]
 
-  :plugins [[lein-cljsbuild "1.0.5"]
+  :plugins [[lein-cljsbuild "1.0.6"]
             [lein-environ "1.0.0"]]
 
-  :min-lein-version "2.5.0"
+  :min-lein-version "2.5.1"
 
   :uberjar-name "casperjs-cljs-test-example.jar"
 
   :aliases {"casper" ["do" "clean" ["with-profiles" "-dev,+casper" ["cljsbuild" "test"]]]
             "casper-test" ["do" "clean" ["with-profiles" "-dev,+casper-test" ["cljsbuild" "test"]]]}
+
+  :clean-targets ["casper/target"]
 
   :cljsbuild {:builds {:app {:source-paths ["src/cljs"]
                              :compiler {:output-to     "resources/public/js/app.js"
