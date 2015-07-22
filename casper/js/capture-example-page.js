@@ -1,7 +1,7 @@
 var casper = require('casper').create();
 
 var examplePage = 'http://localhost:10555',
-  screenshotPath = 'casper/target/screenshots/example-page-body-js.png';
+  screenshotPath = 'casper/target/screenshots/example-page-js.png';
 
 casper.start(examplePage, function () {
   this.echo("The title of the example page (" + examplePage + ") is: " + this.getTitle());

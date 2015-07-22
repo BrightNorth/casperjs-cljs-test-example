@@ -3,7 +3,7 @@
 
 (def casper (.create (.require js/window "casper")))
 (def example-page "http://localhost:10555/")
-(def screenshot-path "casper/target/screenshots/page-example-body-cljs.png")
+(def screenshot-path "casper/target/screenshots/page-example-cljs.png")
 
 
 (.start casper example-page
